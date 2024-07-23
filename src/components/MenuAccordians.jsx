@@ -14,18 +14,18 @@ const MenuAccordians = ({ data }) => {
 
   return (
     <div
-      className="m-4 bg-[#ffffff] text-black border-2 border-black rounded-md shadow-lg"
+      className="m-4 bg-[#ffffff] text-black border-2 border-black rounded-md shadow-lg text-zinc-700"
       onClick={handleClick}
     >
-      <div className="flex justify-between items-center text-lg p-3">
+      <div className="flex justify-between items-center text-2xl p-6">
         <li>
           {data.title} ({data.itemCards.length})
         </li>
-        <li className=" text-[2rem] flex justify-between items-center mr-5 gap-4">
+        <li className=" text-[3rem] flex justify-between items-center mr-5 gap-4">
           <FaArrowCircleDown />
         </li>
       </div>
-      <div className="bg-red-500">
+      <div className="">
         {showItems && <ItemLists items={data.itemCards} />}
       </div>
     </div>

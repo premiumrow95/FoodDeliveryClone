@@ -13,17 +13,16 @@ const Error = () => {
         className="w-full h-full mr-8"
       />
       <div className="h-screen flex flex-col justify-center items-center overflow-hidden">
-        {" "}
-        {/* Limit height and hide overflow */}
-        <h1 className="text-4xl lg:text-5xl font-bold mb-4">
-          That's All Folks !!
+        <h1 className="text-[5.3rem] font-bold mb-2">
+        That&#39;s All Folks !!
+
         </h1>
-        <div className="w-[28rem] text-center bg-red-500 text-lg lg:text-xl font-semibold py-2 px-8 rounded-md mb-4">
+        <div className="w-[38rem] text-center bg-red-500 text-4xl font-semibold py-4 px-8 rounded-xl mb-6">
           {err.status} {err.statusText}
         </div>
         <a
           href="/"
-          className="text-lg lg:text-xl bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-md inline-block transition duration-300"
+          className="text-3xl bg-blue-500 hover:bg-blue-600 text-white font-semibold py-4 px-6 rounded-xl inline-block transition duration-300"
         >
           Go back to homepage
         </a>

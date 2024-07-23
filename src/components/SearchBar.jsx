@@ -12,10 +12,10 @@ const SearchBar = (props) => {
   const [searchText, setSearchText] = useState("");
 
   return (
-    <div className="bg-[#0077B6] flex justify-between items-center flex-wrap border-[4px] border-white border-t-0 border-l-0 border-r-0 font-[poppins]">
-      <div className="flex justify-center items-center gap-2 p-2 font-semibold">
+    <div className="mb-4 flex justify-between items-center flex-wrap  font-[poppins] font-bold text-[1.4rem]">
+      <div className="flex justify-center items-center gap-2 p-2">
         <input
-          className="w-[20rem] h-[2.5rem] flex items-center text-md p-3 bg-[#ffffff] rounded-[10px] outline-none"
+          className="w-[30rem] h-[3.2rem] flex items-center text-[1.4rem] pl-6 p-3 text-[#666666] bg-[#e9e9e9] rounded-[0.8rem] outline-none"
           placeholder="Explore Restaurants"
           value={searchText}
           onChange={(e) => {
@@ -23,7 +23,7 @@ const SearchBar = (props) => {
           }}
         />
         <button
-          className="h-[2.5rem] flex items-center gap-1 text-md p-3 bg-[#ffffff] rounded-[10px] hover:scale-95 transition all duration-100 ease-in"
+          className="h-[3.5rem] flex items-center gap-1 text-[1.4rem] p-3 bg-[#e9e9e9] text-black rounded-[0.8rem] hover:scale-95 transition all duration-100 ease-in"
           onClick={() => {
             const searchList = listOfRestaurant.filter((restau) =>
               restau.info.name.toLowerCase().includes(searchText.toLowerCase())
@@ -31,13 +31,13 @@ const SearchBar = (props) => {
             setListRes(searchList);
           }}
         >
-          <IoIosSearch className="text-2xl text-sky-800 text-ellipsis" />
+          <IoIosSearch className="text-4xl text-sky-400 text-ellipsis" />
           <span>Search</span>
         </button>
       </div>
-      <div className="flex justify-center items-center gap-2 p-2 font-semibold">
+      <div className="flex justify-center items-center gap-2 p-2">
         <button
-          className="h-[2.5rem] flex items-center gap-1 text-md p-3 bg-[#ffffff] rounded-[10px] hover:scale-95 transition all duration-100 ease-in"
+          className="h-[3.5rem] flex items-center gap-1 text-[1.4rem] p-3 bg-[#e9e9e9] text-black rounded-[0.8rem] hover:scale-95 transition all duration-100 ease-in"
           onClick={() => {
             const newList = listRes.filter(
               (restau) => restau.info.avgRating > 4.2
@@ -45,15 +45,15 @@ const SearchBar = (props) => {
             setListRes(newList);
           }}
         >
-          <LiaStarSolid className="text-2xl text-yellow-400 text-ellipsis" />
+          <LiaStarSolid className="text-4xl text-yellow-400 text-ellipsis" />
           <span className="">Top Rated</span>
         </button>
-        <button className="h-[2.5rem] flex items-center gap-1 text-md p-3 bg-[#ffffff] rounded-[10px] hover:scale-95 transition all duration-100 ease-in">
-          <MdDeliveryDining className="text-3xl text-zinc-800 text-ellipsis" />
+        <button className="h-[3.5rem] flex items-center gap-1 text-[1.4rem] p-3 bg-[#e9e9e9] text-black rounded-[0.8rem] hover:scale-95 transition all duration-100 ease-in">
+          <MdDeliveryDining className="text-5xl text-zinc-800 text-ellipsis" />
           <span>Delivery Time</span>
         </button>
-        <button className="h-[2.5rem] flex items-center gap-1 text-md p-3 bg-[#ffffff] rounded-[10px] hover:scale-95 transition all duration-100 ease-in">
-          <FaLeaf className="text-2xl text-green-500 text-ellipsis" />
+        <button className="h-[3.5rem] flex items-center gap-1 text-[1.4rem] p-3 bg-[#e9e9e9] text-black rounded-[0.8rem] hover:scale-95 transition all duration-100 ease-in">
+          <FaLeaf className="text-4xl text-green-500 text-ellipsis" />
           <span>Veg</span>
         </button>
       </div>

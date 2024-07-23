@@ -85,35 +85,35 @@ const RestaurantMenu = () => {
   // console.log(categories)
 
   return (
-    <div className="min-h-screen bg-[#264653] mt-3 pb-4 border-[5px] border-black font-extrabold flex flex-col items-center">
-      <div className="text-[0.9rem] font-semibold text-left w-full text-white">
+    <div className="min-h-screen  mt-3 pb-4 border-2 border-black font-extrabold flex flex-col items-center text-zinc-700  bg-[#ffbe0b]">
+      <div className="text-[2rem] font-semibold text-left w-full">
         <Link to="/" className="">
           Home{" "}
         </Link>
         <span className=""> / {name}</span>
       </div>
 
-      <div className=" w-full h-36 p-2 flex items-center justify-between text-white">
+      <div className=" w-full h-40 p-2 flex items-center justify-between">
         <div className="flex flex-col gap-1 px-4">
-          <div className="font-bold text-3xl">{name}</div>
-          <div className="text-xl font-medium">{cuisines?.join(", ")}</div>
+          <div className="font-bold text-[2.7rem]">{name}</div>
+          <div className="text-2xl font-medium">{cuisines?.join(", ")}</div>
 
-          <div className="text-lg  font-medium">
+          <div className="text-xl  font-medium">
             {areaName + ", " + sla?.lastMileTravelString}
           </div>
         </div>
-        <div className="flex flex-col justify-center mr-4 rounded-lg border-2 w-[6rem] h-24 text-center bg-gray-800 text-white">
-          <div className="flex items-center justify-center rounded-lg text-green-500 text-lg font-bold border-b-2 border-white">
+        <div className="flex flex-col justify-center mr-4 rounded-lg border-2 w-[8rem] h-28 text-center bg-gray-800 text-white">
+          <div className="flex items-center justify-center rounded-lg text-green-500 text-2xl font-bold border-b-2 border-white">
             <FaStar className="mr-1" />
             {avgRatingString}
           </div>
-          <div className="rounded-lg text-sm font-semibold tracking-tighter">
+          <div className="rounded-lg text-xl font-semibold tracking-tighter">
             {totalRatingsString}
           </div>
         </div>
       </div>
-      <div className="w-[60vw] p-2 mt-2 text-white">
-        <li className="font-extrabold text-[2rem]">Menu</li>
+      <div className="w-[60vw] p-2 mt-2 sm:w-[80vw]">
+        <li className="font-extrabold text-[3rem]">Menu</li>
         {categories.map((sections) => (
           <MenuAccordians
             key={sections?.card?.card?.title}
@@ -124,7 +124,7 @@ const RestaurantMenu = () => {
       <Link
         to="#"
         onClick={scrollToTop}
-        className="fixed bottom-7 right-20 text-white text-xl flex justify-center items-center gap-2 border-2 border-[#333333] bg-[#4381e5] p-2 w-[12rem] text-center rounded-md"
+        className="fixed bottom-7 right-20 text-white text-xl flex justify-center items-center gap-2 border-2 border-[#333333] bg-[#e54343] p-2 w-[12rem] text-center rounded-md"
       >
         <FaArrowUp  className="text-xl"/>
         Go to Top

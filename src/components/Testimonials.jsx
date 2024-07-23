@@ -3,10 +3,11 @@ import React from "react";
 const Testimonials = () => {
   return (
     <div className="max-w-4xl mx-auto flex items-center justify-center h-full font-semibold">
-      <div className="w-[70rem] mx-auto p-8 rounded-lg bg-gradient-to-br from-purple-700 to-indigo-700 text-white shadow-lg">
-        <div className="text-2xl md:text-3xl lg:text-4xl mb-8">
-          "You are not dealing with an average coder anymore. He has risen above
-          and realized the legend. He has become a Super Coder !!"
+      <div className="w-[30rem] mx-auto p-8 rounded-lg bg-gradient-to-br from-purple-700 to-indigo-700 text-white shadow-lg">
+        <div className="text-4xl mb-8">
+        &quot;You are not dealing with an average coder anymore. He has risen above
+and realized the legend. He has become a Super Coder !!&quot;
+
         </div>
         <div className="flex items-center justify-between">
           <div className="flex items-center">
@@ -16,10 +17,10 @@ const Testimonials = () => {
               alt="Author"
             />
             <div>
-              <div className="font-bold text-lg">
+              <div className="font-bold text-3xl">
                 Vegeta - The Prince Of All Saiyans
               </div>
-              <div className="text-sm">
+              <div className="text-xl">
                 Software Engineer at Saiyans Corporation
               </div>
             </div>

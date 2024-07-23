@@ -16,27 +16,27 @@ const Header = () => {
   const cartItems = useSelector((store) => store.cart.items);
 
   return (
-    <div className="relative border-[5px] bg-[#264653] border-[#000000] pt-2 pb-2 nav-open ">
-      <div className="bg-[#0077B6] m-auto w-[81rem] h-[4.4rem] rounded-[20px] flex justify-between items-center border-[4px] border-[#ffffff] overflow-hidden">
-        <div className="flex justify-center items-center pl-[1.15rem] pr-[1.15rem] font-[cookie] font-semibold text-white gap-5">
-          <div className="w-[4rem] h-full">
+    <div className="border-2 border-black bg-[#1793c4]">
+      <div className=" h-[6rem] flex justify-between items-center overflow-hidden">
+        <div className="flex justify-center items-center pl-[3.15rem] pr-[3.15rem] text-[#fdfdfd] text-[1.4rem] gap-4">
+          <div className="w-[5rem] h-full">
             <Link to={"/"}>
               <img src={logo} alt="Logo" className="size-full" />
             </Link>
           </div>
-          <div className="">
-            <Link to={"/"} className="text-[3rem]">
-              Ratatouille
+          <div className="headerFont">
+            <Link to={"/"} className="text-[3.4rem]">
+            Ratatouille
             </Link>
           </div>
         </div>
-        <ul className="ul_list flex justify-center items-center gap-2 p-2 h-full font-extrabold font-[poppins] text-white text-[1.2rem] z-20 transition-all duration-300">
-          <li className="sm:w-full h-full">
+        <ul className="ul_list flex justify-center items-center gap-4 p-1 h-full font-extrabold font-[Inter] text-[#fdfdfd] text-[1.6rem] z-20 transition-all duration-300 sm:text-[1.2rem] ">
+          <li className="">
             <Link
               to={"/"}
-              className="h-full flex justify-center items-center gap-2 p-2 rounded-xl bg-[#ffffff] text-black"
+              className=" flex justify-center items-center gap-2 p-2 rounded-xl bg-[#ffffff] text-black"
             >
-              <FaHome className="text-[2rem]" />
+              <FaHome className="text-[3.3rem]" />
               <span>Home</span>
             </Link>
           </li>
@@ -45,32 +45,32 @@ const Header = () => {
               Online: {onlineStatus ? '💚' : '💔'}
             </span>
           </li> */}
-          <li className="sm:w-full h-full">
+          <li className="">
             <Link
               to={"/about"}
-              className="h-full flex justify-center items-center gap-2 p-2 rounded-xl hover:bg-[#ffffff] hover:text-black transition-all duration-300 ease-in"
+              className=" flex justify-center items-center gap-2 p-2 rounded-xl hover:bg-[#ffffff] hover:text-black transition-all duration-300 ease-in"
             >
-              <IoRestaurantSharp className="text-[2rem]" />
+              <IoRestaurantSharp className="text-[3rem]" />
               <span>About Us</span>
             </Link>
           </li>
-          <li className="sm:w-full h-full">
+          <li className="">
             <span className="h-full flex justify-center items-center p-2 rounded-xl hover:bg-[#ffffff] hover:text-black transition-all duration-300 ease-in">
-              <FaBookBookmark className="text-[2rem] mr-1" />
+              <FaBookBookmark className="text-[3rem] mr-1" />
               <span>Portfolio</span>
             </span>
           </li>
-          <li className="sm:w-full h-full">
-            <span className="h-full flex justify-center items-center p-2 rounded-xl hover:bg-[#ffffff] hover:text-black transition-all duration-300 ease-in">
-              <FaCartArrowDown className="text-[2rem] mr-1" />
+          <li className="">
+            <span className=" flex justify-center items-center p-2 rounded-xl hover:bg-[#ffffff] hover:text-black transition-all duration-300 ease-in">
+              <FaCartArrowDown className="text-[3rem] mr-1" />
               <Link to={"/cart"}>
                 <span>Cart ({cartItems.length})</span>
               </Link>
             </span>
           </li>
-          <li className="h-full">
+          <li className="">
             <button
-              className="h-full block p-2 rounded-xl hover:bg-[#ffffff] hover:text-black transition-all duration-300 ease-in"
+              className="block p-2 rounded-xl hover:bg-[#ffffff] hover:text-black transition-all duration-300 ease-in"
               onClick={() => {
                 btnName === "Login"
                   ? setBtnName("Logout")

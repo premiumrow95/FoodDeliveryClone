@@ -10,7 +10,7 @@ const Cart = () => {
     dispatch(clearCart());
   };
   return (
-    <div className="min-h-screen bg-[#264653] mt-3 border-[5px] border-black font-extrabold text-white">
+    <div className="bg-sky-300 min-h-screen mt-3 border-2 border-black font-extrabold text-white">
       <div className="w-[40rem] m-auto flex flex-col items-center">
         Cart
         <button
